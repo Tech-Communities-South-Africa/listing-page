@@ -1,5 +1,5 @@
 ---
-import example from "../data/example.json";
+import meetup from "../data/meetup.json";
 ---
 
 <html lang="en">
@@ -50,9 +50,8 @@ import example from "../data/example.json";
   </head>
 
   <body>
-    <h1>Welcome to my website!</h1>
     <ul>
-      {example.map((data) => <li>{data.title}</li>)}
+      {meetup.map((data) => <li>{data.name}</li>)}
     </ul>
   </body>
 </html>
