@@ -1,14 +1,58 @@
 ---
-import example from '../data/example.json'
+import example from "../data/example.json";
 ---
+
 <html lang="en">
   <head>
-    <title>My Homepage</title>
+    <title>RSA Tech Communities | FEDSA</title>
+    <meta name="title" content="RSA Tech Communities | FEDSA" />
+
+    <meta
+      name="description"
+      content="Discover the latest events, engage with thriving communities, participate in immersive online workshops, and access enriching educational content—all designed to elevate your coding prowess."
+    />
+
+    <meta property="og:type" content="website" />
+
+    <meta
+      property="og:url"
+      content="https://listing-page-tech-communities-south-africa.vercel.app/meta/preview.png"
+    />
+
+    <meta property="og:title" content="RSA Tech Communities | FEDSA" />
+
+    <meta
+      property="og:description"
+      content="Discover the latest events, engage with thriving communities, participate in immersive online workshops, and access enriching educational content—all designed to elevate your coding prowess."
+    />
+
+    <meta
+      property="og:image"
+      content="https://listing-page-tech-communities-south-africa.vercel.app/meta/preview.png"
+    />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://listing-page-tech-communities-south-africa.vercel.app"
+    />
+    <meta property="twitter:title" content="RSA Tech Communities | FEDSA" />
+
+    <meta
+      property="twitter:description"
+      content="Discover the latest events, engage with thriving communities, participate in immersive online workshops, and access enriching educational content—all designed to elevate your coding prowess."
+    />
+
+    <meta
+      property="twitter:image"
+      content="https://listing-page-tech-communities-south-africa.vercel.app/meta/preview.png"
+    />
   </head>
+
   <body>
     <h1>Welcome to my website!</h1>
-	<ul>
-		{example.map((data) => <li>{data.title}</li>)}
-	</ul>
+    <ul>
+      {example.map((data) => <li>{data.title}</li>)}
+    </ul>
   </body>
 </html>
