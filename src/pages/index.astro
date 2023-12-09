@@ -1,5 +1,7 @@
 ---
-import meetup from "../data/meetup.json";
+import items from "../data/items.json";
+const meetups = items.filter(({ type }) => type === "meetup");
+const conferences = items.filter(({ type }) => type === "conference");
 ---
 
 <html lang="en">
@@ -50,9 +52,16 @@ import meetup from "../data/meetup.json";
   </head>
 
   <body>
-    <div class="flex p-5">
-      <div class="md:max-w-[50vw]">
-        <h1 class="md:text-[2rem] md:max-w-[30rem] mb-5 font-bold">
+    <div class="flex flex-col md:flex-row p-5">
+      <div class="md:w-[50%] md:order-last mb-5">
+        <img
+          class="max-h-[20rem] rounded"
+          src="/images/flag.png"
+          alt="Banner"
+        />
+      </div>
+      <div class="md:w-[50%]">
+        <h1 class="md:text-[2rem] text-[2rem] md:max-w-[30rem] mb-5 font-bold">
           Communities, Events & Resources
         </h1>
         <p class="md:text-lg md:max-w-[25rem]">
@@ -60,7 +69,9 @@ import meetup from "../data/meetup.json";
           participate in immersive Online Workshops, and access enriching
           Educational Content—all designed to elevate your coding prowess.
         </p>
-        <div class="flex mt-5 text-xs place-content-start">
+        <div
+          class="flex mt-5 text-xs md:place-content-start place-content-center justify-between"
+        >
           <div class="mr-2">
             <button class="rounded p-2 bg-slate-700 text-white">Events</button>
           </div>
@@ -74,17 +85,10 @@ import meetup from "../data/meetup.json";
           </div>
         </div>
       </div>
-
-      <div>
-        <img
-          class="max-h-[20rem] rounded"
-          src="https://i.ibb.co/Zdch3WC/meetup.png"
-          alt="Banner"
-        />
-      </div>
     </div>
+
     <ul>
-      {meetup.map((data) => <li>{data.name}</li>)}
+      {meetups.map((data) => <li>{data.name}</li>)}
     </ul>
   </body>
 </html>
