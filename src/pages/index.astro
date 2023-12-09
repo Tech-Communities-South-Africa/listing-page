@@ -50,6 +50,39 @@ import meetup from "../data/meetup.json";
   </head>
 
   <body>
+    <div class="flex p-5">
+      <div class="md:max-w-[50vw]">
+        <h1 class="md:text-[2rem] md:max-w-[30rem] mb-5 font-bold">
+          Communities, Events & Resources
+        </h1>
+        <p class="md:text-lg md:max-w-[25rem]">
+          Discover the latest Events, engage with thriving Communities,
+          participate in immersive Online Workshops, and access enriching
+          Educational Content—all designed to elevate your coding prowess.
+        </p>
+        <div class="flex mt-5 text-xs place-content-start">
+          <div class="mr-2">
+            <button class="rounded p-2 bg-slate-700 text-white">Events</button>
+          </div>
+          <div class="mr-2">
+            <button class="rounded p-2 bg-slate-700 text-white"
+              >Conferences</button>
+          </div>
+          <div>
+            <button class="rounded p-2 bg-slate-700 text-white"
+              >Resources</button>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <img
+          class="max-h-[20rem] rounded"
+          src="https://i.ibb.co/Zdch3WC/meetup.png"
+          alt="Banner"
+        />
+      </div>
+    </div>
     <ul>
       {meetup.map((data) => <li>{data.name}</li>)}
     </ul>
