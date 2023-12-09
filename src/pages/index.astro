@@ -77,18 +77,25 @@ const conferences = items.filter(({ type }) => type === "conference");
           </div>
           <div class="mr-2">
             <button class="rounded p-2 bg-slate-700 text-white"
-              >Conferences</button>
+              >Conferences</button
+            >
           </div>
           <div>
             <button class="rounded p-2 bg-slate-700 text-white"
-              >Resources</button>
+              >Resources</button
+            >
           </div>
         </div>
       </div>
     </div>
-
+    <h2>Meetups</h2>
     <ul>
       {meetups.map((data) => <li>{data.name}</li>)}
+    </ul>
+
+    <h2>Conferences</h2>
+    <ul>
+      {conferences.map((data) => <li>{data.name}</li>)}
     </ul>
   </body>
 </html>
